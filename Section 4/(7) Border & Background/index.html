@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders & Background</title>
+    <style>
+        #borderStyle{
+            /* border-width: 5px;
+            border-style: solid;
+            border-color: blue;
+            border-radius: 8px; */
+
+            /* This is shorthand property to add BORDER */
+            border: 2px solid brown;
+            /* border-top: 2px dashed brown; */
+            /* border-bottom: 2px dashed brown; */
+            /* border-right: 2px dashed brown; */
+            /* border-left: 2px dashed brown; */
+
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #backgroundStyle{
+            background-color: burlywood;
+            height: 720px;
+            width: 720px;
+            background-image: url("logo.png");
+            background-repeat: no-repeat;
+            /* background-position: center center; */
+            /* background-position: bottom center; */
+            /* background-position: top center; */
+            /* background-position: center left; */
+            /* background-position: center right; */
+
+            /* background-size: cover; */
+            /* background-size: contain; */
+            /* background-size: auto; */
+            background-attachment: scroll;
+
+            background: aquamarine url("logo.png") no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <p id="borderStyle">This is a sample text where we will style border</p>
+    <p id="backgroundStyle">This is a sample text where we will style background</p>
+</body>
+</html>

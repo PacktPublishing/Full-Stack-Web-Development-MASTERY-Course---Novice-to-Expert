@@ -1,0 +1,21 @@
+{
+    "name": "Appearance",
+    "description": "Go from light mode to dark mode and vice versa",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "popup.js"
+        ],
+    "persistent": true
+    },
+    "browser_action": {
+        "default_title": "Appearance",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+}

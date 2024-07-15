@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positio property in CSS</title>
+    <style>
+        .container{
+            border: 5px solid red;
+            background-color: burlywood;
+            height: 1000px;
+        }
+        .box{
+            font-size: 25px;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            display: inline-block;
+        }
+        #box1{
+            position: relative;
+        }
+        #box4{
+            top: 10px;
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">This is a box 1</div>
+        <div class="box" id="box2">This is a box 2</div>
+        <div class="box" id="box3">This is a box 3</div>
+        <div class="box" id="box4">This is a box 4</div>
+    </div>
+</body>
+</html>

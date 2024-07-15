@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(235, 73, 73);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+form{
+    position: relative;
+}
+
+input{
+    min-width: 28rem;
+    height: 4rem;
+    padding: 0 25px;
+    outline: 0;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 50px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.far{
+    position: absolute;
+    font-size: 30px;
+    color: rgb(39, 39, 39);
+    top: 1.1rem;
+    right: 1.2rem;
+    cursor: pointer;
+}
+
+.message{
+    position: relative;
+    width: 25rem;
+    height: 14em;
+    background: white;
+    top: 1.5rem;
+    border-radius: 10px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.password-contain{
+    position: relative;
+    font-size: 22px;
+    padding: 0 60px;
+    color: rgb(46, 45, 45);
+    font-weight: 500;
+}
+
+.valid{
+    color: green;
+}
+
+.invalid{
+    color: red;
+}
+
+.fas{
+    position: relative;
+    top: 1.6rem;
+    font-size: 22px;
+    padding: 0 30px;
+    color: red;
+}
+
+.fa-check{
+    color: green;
+}
+

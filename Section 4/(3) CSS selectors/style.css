@@ -1,0 +1,37 @@
+/* Universal Selectors */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Element Selectors */
+p{
+    color: brown;
+}
+
+/* Id selectors */
+#secondPara{
+    color: blue;
+}
+
+/* Class selectors */
+.test{
+    color: yellow;
+}
+
+/* Grouping selectors */
+h1, p{
+    color: green;
+}
+
+div p{
+    background-color: turquoise;
+}
+
+div>span{
+    border: 2px solid black;
+}
+
+div + p{
+    background-color: blueviolet;
+}

@@ -1,0 +1,93 @@
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.container{
+  width:100%;
+  display:flex;
+  justify-content:space-evenly;
+}
+.card{
+  position:relative;
+  width:300px;
+  height:420px;
+  background:#fff;
+  box-shadow:0 10px 20px rgba(0,0,0,.3);
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  padding-left:20px;
+  font-family: 'Poppins', sans-serif;
+  overflow:hidden;
+}
+.card::after , .card::before{
+  content:"";
+  position: absolute;
+  border-radius:50%;
+ background:#503e9d;
+ opacity:.3;
+}
+.card::after{
+  top:-20%;
+  right:-20%;
+  width:200px;
+  height:200px;
+}
+.card::before{
+  top:-15%;
+  right:-13%;
+  width:160px;
+  height:160px;
+}
+.card h3{
+  color:#503e9d;
+}
+.details ul{
+  width:200px;
+  height:180px;
+  list-style: none;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.details ul li{
+  display: flex;
+  align-items:center;
+  font-size:15px;
+}
+.details i{
+  display:block;
+  width:30px;
+}
+.fa-check{
+  color:#47d147;
+}
+.fa-times{
+  color:#ff3333;
+}
+.card p{
+  font-size:14px;
+}
+.card p span{
+  font-size:45px;
+  font-weight:600;
+  color:#503e9d;
+}
+button{
+  width:260px;
+  height:40px;
+  font-size:17px;
+  border:none;
+  background:#503e9d;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
+  box-shadow:0 9px 14px rgba(0,0,0,.3);
+}

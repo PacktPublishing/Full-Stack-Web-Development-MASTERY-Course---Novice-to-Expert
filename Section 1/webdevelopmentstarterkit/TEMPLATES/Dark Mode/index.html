@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body data-theme="">
+    <div class="darkMode">
+        <input type="checkbox" name="" id="btn">
+        <div class="box">
+            <i class="far fa-moon fa-2x"></i>
+            <i class="fas fa-sun fa-2x"></i>
+        </div>
+    </div>
+    <div class="card">
+        <img src="profile.jpeg" alt="">
+        <h2>John Due</h2>
+        <p>Software Developer</p>
+        <button class="btn">About</button>
+    </div>
+
+    <script>
+        const btn = document.querySelector('#btn');
+
+
+        btn.addEventListener("click", (e)=> {
+            if(btn.checked == true){
+                document.body.setAttribute("data-theme", "dark");
+            }else{
+                document.body.setAttribute("data-theme", "");
+            }
+        });
+    </script>
+</body>
+</html>

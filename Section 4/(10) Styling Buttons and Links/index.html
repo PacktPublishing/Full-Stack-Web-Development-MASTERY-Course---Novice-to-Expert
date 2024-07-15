@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling links and Buttons</title>
+    <style>
+        .container{
+            width: 350px;
+            margin: auto;
+            padding: 10px;
+            background-color: burlywood;
+            border: 2px solid black;
+        }
+        .container a{
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .container a:hover{
+            background-color: black;
+            color: white;
+        }
+        .container a:visited{
+            color: blueviolet;
+        }
+        .btn{
+            border-radius: 5px;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+        .btn:active{
+            background-color: aqua;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel magnam dignissimos sit, molestias rerum
+            veritatis in doloribus repudiandae repellat illo enim natus architecto culpa est ipsam sint fuga eligendi
+            hic pariatur quos fugit! Voluptate, in.</p>
+            <a href="https://walmart.com" target="_blank">Click HERE</a>
+            <button class="btn">Submit</button>
+    </div>
+</body>
+
+</html>

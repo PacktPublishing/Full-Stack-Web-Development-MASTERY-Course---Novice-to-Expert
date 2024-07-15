@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: black;
+  width: 100px;
+  height: 100vh;
+}
+.main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  cursor: pointer;
+}
+.icon{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+  border-radius: 50px;
+  transition: all .8s;
+}
+.icon:hover{
+  background: #e60073;
+  box-shadow: 0 0 20px #e60073;
+}
+.icon:hover:nth-child(2){
+  background: #1877f2;
+  box-shadow: 0 0 20px #1877f2;
+}
+.icon:hover:nth-child(3){
+  background: #25d366;
+  box-shadow: 0 0 20px #25d366;
+}
+.icon:hover:nth-child(4){
+  background: #1da1f2;
+  box-shadow: 0 0 20px #1da1f2;
+}
+.icon i{
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+svg circle{
+  stroke-dasharray: 150;
+  transition: all .8s;
+}
+.icon:hover svg circle{
+  stroke-dasharray: 220;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Z-index</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 120px;
+            border: 2px solid black;
+        }
+        .box1{
+            width: 60px;
+            height: 60px;
+            border: 2px solid black;
+        }
+        #red{
+            background-color: red;
+            position: relative;
+
+            /* If you want red box to stack up on green and blue box then use Z-index, make sure that position is not default i.e. position:static, you have to change position of your element apart from static */
+            z-index: 100;
+        }
+        #green{
+            position: relative;
+            background-color: green;
+            top: -45px;
+            left: 40px;
+
+            /* If you want this box to vanish and want some blank white space which suggests that there was a box */
+            /* visibility: hidden; */
+
+            /* If you want this box to vanish and you do not want some blank white space which suggests that there was a box */
+            /* display: none; */
+        }
+        #blue{
+            background-color: blue;
+            position: relative;
+        }
+        #yellow{
+            background-color: yellow;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="red"></div>
+    <div class="box" id="green">
+        
+    </div>
+    <div class="box1" id="yellow">
+
+    </div>
+    <div class="box" id="blue"></div>
+</body>
+</html>

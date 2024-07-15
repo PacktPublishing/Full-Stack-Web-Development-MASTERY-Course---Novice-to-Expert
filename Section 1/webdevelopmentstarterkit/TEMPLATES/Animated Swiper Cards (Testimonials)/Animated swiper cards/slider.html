@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    body {
+      width: 100%;
+      display: flex;
+      margin: auto;
+      align-items: center;
+      height: 100vh;
+      background-color: #111;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 90%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+    }
+
+    .slide-container {
+      padding: 11px 32px;
+    }
+
+    .slide-card {
+      background-color: #111;
+      box-shadow: 0 8px 30px -7px #000;
+      margin: 0 20px;
+      padding: 9px 33px;
+      border-radius: 20px;
+      border: 0;
+      cursor: grab;
+    }
+
+    .slide-card .slide-card-img-top {
+      max-width: 100px;
+      border-radius: 50%;
+      margin: 15px auto 0;
+      box-shadow: 0 8px 20px -4px #000;
+      width: 100px;
+      height: 100px;
+    }
+
+    .slide-card h5 {
+      color: #01b0f8;
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .slide-card h5 span {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .slide-card p {
+      font-size: 18px;
+      color: rgb(240, 222, 222);
+      padding-bottom: 15px;
+    }
+
+    .swiper-slide.swiper-slide-active {
+      transform: scale(1.2);
+    }
+
+    .autoplay {
+      position: absolute;
+      color: #000;
+      font: 100px/100% arial, sans-serif;
+      right: 15px;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+      top: 15px;
+      width: auto;
+      height: auto;
+      z-index: 999;
+      opacity: 0.4;
+      transition: opacity 0.1s ease-in, transform 0.1s ease-out;
+      animation: fade_close 3s ease-out;
+    }
+
+    @media (max-width: 800px) {
+      .slide-container {
+        padding: 0px 0px;
+      }
+
+      .swiper-slide {
+        width: 360px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-container">
+          <div class="slide-card text-center"><img class="slide-card-img-top" src="1.jfif" alt="">
+            <div class="slide-card-body">
+              <h5>Ronne Galle <br />
+                <span> Project Manager </span>
+              </h5>
+              <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-container">
+          <div class="slide-card text-center"><img class="slide-card-img-top" src="2.jfif" alt="">
+            <div class="slide-card-body">
+              <h5>Ronne Galle <br />
+                <span> Project Manager </span>
+              </h5>
+              <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-container">
+          <div class="slide-card text-center">
+            <img class="slide-card-img-top" src="3.jfif" alt="">
+            <div class="slide-card-body">
+              <h5>Ronne Galle <br />
+                <span> Project Manager </span>
+              </h5>
+              <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-container">
+          <div class="slide-card text-center"><img class="slide-card-img-top" src="4.jfif" alt="">
+            <div class="slide-card-body">
+              <h5>Ronne Galle <br />
+                <span> Project Manager </span>
+              </h5>
+              <p class="slide-card-text">“ Nam libero tempore, cum soluta nobis est eligendi
+                optio cumque nihil impedit quo minus id quod maxime placeat ” </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      autoplay:
+      {
+        delay: 2000,
+      },
+      loop: true,
+
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 10,
+      centeredSlides: true,
+      roundLengths: true,
+      loop: true,
+      loopAdditionalSlides: 30,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 0
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 0
+        }
+      }
+    });
+
+  </script>
+</body>
+
+</html>

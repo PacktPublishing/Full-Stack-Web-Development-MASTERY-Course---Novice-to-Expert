@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    --primary-color: #e7e0ee;
+    --sec-color: #F3F1F5;
+    --hover-color: #11052C;
+    --color: #1f1f1f;
+    --text-color: #F3F1F5;
+}
+body[data-theme= "dark"]{
+    --primary-color: #0f0f0f;
+    --hover-color: #EDEDED;
+    --text-color: #1f1f1f;
+    --sec-color: #1a1a1a;
+    --color: #f0f0f0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--primary-color);
+    color: var(--color);
+}
+.card {
+    width: 350px;
+    height: 350px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+    background: var(--sec-color);
+    border-radius: 10px;
+}
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 1em;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.151);
+    cursor: pointer;
+    background: var(--sec-color);
+    color: var(--color);
+    transition: all .4s;
+}
+.btn:hover{
+    background: var(--hover-color);
+    color: var(--text-color);
+}
+
+
+/* dark mode */
+.darkMode{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translate(-50%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.darkMode .box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--sec-color);
+    transition: all .4s;
+}
+.darkMode input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.darkMode input:checked ~ .box{
+    transform: rotate(180deg);
+}
+.darkMode input:checked ~ .box i{
+    transform: rotate(180deg);
+}

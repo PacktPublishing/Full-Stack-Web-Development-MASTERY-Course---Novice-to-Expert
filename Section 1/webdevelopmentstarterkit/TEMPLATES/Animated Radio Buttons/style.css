@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    height: 100vh;
+    justify-content: center;
+    background: #fbfbfb;
+    color: #cacaca;
+}
+
+.main_wrapper{
+    position: relative;
+    width: 260px;
+    height: 300px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.082);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons_wrapper{
+    width: 160px;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+input{
+    display: none;
+}
+
+.entry{
+    position: relative;
+    width: 100%;
+    transition: .5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+}
+
+.circle{
+    border: 3px solid #cacaca;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    top: 50%;
+    transition: border-color .5s;
+}
+
+.entry-label{
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.highlight{
+    background: #2093ff;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    top: 19px;
+    left: 7px;
+    pointer-events: none;
+    position: absolute;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    transform: translateY(-55px);
+}
+
+input:nth-child(1):checked ~ .highlight{
+    transform: translateY(0);
+}
+
+input:nth-child(3):checked ~ .highlight{
+    transform: translateY(55px);
+}
+
+input:nth-child(5):checked ~ .highlight{
+    transform: translateY(110px);
+}
+
+input:checked + .entry .circle{
+    border-color: #2093ff;
+    color: #2093ff;
+}
+
+input:checked + .entry{
+    color: #2093ff;
+}

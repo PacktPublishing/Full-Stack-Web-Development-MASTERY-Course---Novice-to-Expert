@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password validator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/096ce72fd4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <form action="#">
+            <input type="password" id="myPassword">
+            <i class="far fa-eye" id="eye" onclick="showtoggle()"></i>
+        </form>
+    </div>
+    <div class="message" id="message">
+        <i class="fas fa-times" id="numberIcon"></i>
+        <p class="password-contain" id="number">Must have numbers!</p>
+
+        <i class="fas fa-times" id="charIcon"></i>
+        <p class="password-contain" id="specialCHAR">Must have a special char!</p>
+
+        <i class="fas fa-times" id="capitalIcon"></i>
+        <p class="password-contain" id="capital">An uppercase letter!</p>
+
+        <i class="fas fa-times" id="lengthIcon"></i>
+        <p class="password-contain" id="length">Should be 8 characters!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

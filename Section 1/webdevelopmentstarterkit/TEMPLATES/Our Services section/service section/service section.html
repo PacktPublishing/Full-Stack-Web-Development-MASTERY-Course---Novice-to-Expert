@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #111;
+        }
+        .row {
+            display: flex;
+        }
+
+        .service {
+            align-items: stretch;
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 13px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            padding: 8px 20px;
+            line-height: 1;
+            margin: 0;
+            background: rgba(255, 252, 252, 0.925);
+            color: #e43c5c;
+            display: inline-block;
+            text-transform: uppercase;
+            border-radius: 50px;
+            font-family: "Nunito", sans-serif
+        }
+
+        .section-title h3 {
+            margin: 15px 0 0 0;
+            font-size: 32px;
+            font-weight: 700;
+            font-family: "Nunito", sans-serif;
+            color: rgba(255, 255, 255, 0.849);
+        }
+
+        span {
+            color: #e43c5c
+        }
+
+        .services {
+            padding: 60px 0;
+            overflow: hidden;
+        }
+
+        .services .container {
+            max-width: 1060px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .services .icon-box {
+            padding: 60px 30px;
+            position: relative;
+            overflow: hidden;
+            background: #111;
+            box-shadow: 2px 0 35px 0 rgba(235, 237, 243, 0.048);
+            transition: all 0.3s ease-in-out;
+            border-radius: 8px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .services .icon-box::before {
+            content: "";
+            position: absolute;
+            background: #111;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 100%;
+            transition: all 0.4s;
+            z-index: -1;
+        }
+
+        .services .icon-box:hover::before {
+            background: #e43c5c;
+            top: 0;
+            border-radius: 0px;
+        }
+
+        .services .icon {
+            margin-bottom: 15px;
+        }
+
+        .services .icon i {
+            font-size: 48px;
+            line-height: 1;
+            color: #e43c5c;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .services .title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .services .title a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .services .description {
+            font-size: 15px;
+            line-height: 28px;
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.884);
+        }
+
+        .services .icon-box:hover .title a,
+        .services .icon-box:hover .description {
+            color: #fff;
+        }
+
+        .services .icon-box:hover .icon i {
+            color: #fff;
+        }
+
+        @media (min-width: 899px) {
+            .service {
+                flex: 0 0 auto;
+                width: 25%;
+            }
+
+            .container {
+                max-width: 720px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+        }
+
+        @media (max-width: 900px) {
+            .row {
+                padding-right: calc(2.5rem/ 2);
+                padding-left: calc(2.5rem/ 2);
+                flex-wrap: wrap;
+            }
+
+
+            .service {
+                flex: 0 0 auto;
+                width: 50%;
+                margin-bottom: 3rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .service {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Services</h2>
+                <h3>We do offer awesome <span>Services</span></h3>
+            </div>
+
+            <div class="row">
+                <div class="service">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-snowman"></i></div>
+                        <h4 class="title"><a href="">Mandap decoration</a></h4>
+                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
+                            excepturi</p>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-music"></i></div>
+                        <h4 class="title"><a href="">DJ sound service</a></h4>
+                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore</p>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-video"></i></div>
+                        <h4 class="title"><a href="">Video & Photography</a></h4>
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-walking"></i></div>
+                        <h4 class="title"><a href="">Stage decoration</a></h4>
+                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+    <script src="https://kit.fontawesome.com/dd8c49730d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
